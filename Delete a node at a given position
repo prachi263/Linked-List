@@ -1,0 +1,28 @@
+void del(int pos)
+{
+  if(start==NULL)
+  cout<<"Underflow.\n";
+  else if(pos==1)
+  {
+    temp=start;
+    start=temp->link;
+    temp->link=NULL;
+    cout<<"Deleting "<<temp->info;
+    delete temp;
+  }
+  else
+  {
+    int i=1;
+    temp=start;
+    while(i!=pos)
+    {
+      n=temp;
+      temp=temp->link;
+      i++;
+    }
+    n->link=temp->link;
+    temp->link=NULL;
+    cout<<"Deleting "<<temp->info;
+    delete temp;
+  }
+}
