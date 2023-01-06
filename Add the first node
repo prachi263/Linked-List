@@ -1,0 +1,11 @@
+public void addFirst(int val){
+  Node temp = new Node();
+  temp.data = val;
+  temp.next = head;
+  head = temp;
+  if(n==NULL)
+  {
+    head = temp;
+   }
+   n++;
+}
