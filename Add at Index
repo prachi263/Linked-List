@@ -1,0 +1,13 @@
+void ins_after(int val,int x)
+{
+  n=new node;
+  n->info=val;
+  n->link=NULL;
+  temp=start;
+  while(temp->info!=x)
+  {
+    temp=temp->link;
+    n->link=temp->link;
+  }
+  temp->link=n;
+}
